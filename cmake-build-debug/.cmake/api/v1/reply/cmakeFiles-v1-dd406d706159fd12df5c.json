@@ -144,6 +144,36 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "D:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/OpenCVConfig-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/OpenCVConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/OpenCVConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "D:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/OpenCVModules.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/OpenCVModules-release.cmake"
 		}
 	],
 	"kind" : "cmakeFiles",

@@ -41,40 +41,6 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = D$:/program/cpp/rm-test/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target rm_test
-
-
-#############################################
-# Order-only phony target for rm_test
-
-build cmake_object_order_depends_target_rm_test: phony || CMakeFiles/rm_test.dir
-
-build CMakeFiles/rm_test.dir/main.cpp.obj: CXX_COMPILER__rm_test_Debug D$:/program/cpp/rm-test/main.cpp || cmake_object_order_depends_target_rm_test
-  DEP_FILE = CMakeFiles\rm_test.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++17
-  INCLUDES = -ID:/program/cpp/rm-test/ex2
-  OBJECT_DIR = CMakeFiles\rm_test.dir
-  OBJECT_FILE_DIR = CMakeFiles\rm_test.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target rm_test
-
-
-#############################################
-# Link the executable rm_test.exe
-
-build rm_test.exe: CXX_EXECUTABLE_LINKER__rm_test_Debug CMakeFiles/rm_test.dir/main.cpp.obj
-  FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\rm_test.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = rm_test.exe
-  TARGET_IMPLIB = librm_test.dll.a
-  TARGET_PDB = rm_test.exe.dbg
-
-# =============================================================================
 # Object build statements for EXECUTABLE target ex1
 
 
@@ -86,7 +52,7 @@ build cmake_object_order_depends_target_ex1: phony || CMakeFiles/ex1.dir
 build CMakeFiles/ex1.dir/ex1/ex1.cpp.obj: CXX_COMPILER__ex1_Debug D$:/program/cpp/rm-test/ex1/ex1.cpp || cmake_object_order_depends_target_ex1
   DEP_FILE = CMakeFiles\ex1.dir\ex1\ex1.cpp.obj.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -ID:/program/cpp/rm-test/ex2
+  INCLUDES = -ID:/program/cpp/rm-test/ex2 -ID:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/include
   OBJECT_DIR = CMakeFiles\ex1.dir
   OBJECT_FILE_DIR = CMakeFiles\ex1.dir\ex1
 
@@ -120,21 +86,21 @@ build cmake_object_order_depends_target_ex2: phony || CMakeFiles/ex2.dir
 build CMakeFiles/ex2.dir/ex2/ex2.cpp.obj: CXX_COMPILER__ex2_Debug D$:/program/cpp/rm-test/ex2/ex2.cpp || cmake_object_order_depends_target_ex2
   DEP_FILE = CMakeFiles\ex2.dir\ex2\ex2.cpp.obj.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -ID:/program/cpp/rm-test/ex2
+  INCLUDES = -ID:/program/cpp/rm-test/ex2 -ID:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/include
   OBJECT_DIR = CMakeFiles\ex2.dir
   OBJECT_FILE_DIR = CMakeFiles\ex2.dir\ex2
 
 build CMakeFiles/ex2.dir/ex2/Pattern.cpp.obj: CXX_COMPILER__ex2_Debug D$:/program/cpp/rm-test/ex2/Pattern.cpp || cmake_object_order_depends_target_ex2
   DEP_FILE = CMakeFiles\ex2.dir\ex2\Pattern.cpp.obj.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -ID:/program/cpp/rm-test/ex2
+  INCLUDES = -ID:/program/cpp/rm-test/ex2 -ID:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/include
   OBJECT_DIR = CMakeFiles\ex2.dir
   OBJECT_FILE_DIR = CMakeFiles\ex2.dir\ex2
 
 build CMakeFiles/ex2.dir/ex2/Group.cpp.obj: CXX_COMPILER__ex2_Debug D$:/program/cpp/rm-test/ex2/Group.cpp || cmake_object_order_depends_target_ex2
   DEP_FILE = CMakeFiles\ex2.dir\ex2\Group.cpp.obj.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -ID:/program/cpp/rm-test/ex2
+  INCLUDES = -ID:/program/cpp/rm-test/ex2 -ID:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/include
   OBJECT_DIR = CMakeFiles\ex2.dir
   OBJECT_FILE_DIR = CMakeFiles\ex2.dir\ex2
 
@@ -155,6 +121,74 @@ build ex2.exe: CXX_EXECUTABLE_LINKER__ex2_Debug CMakeFiles/ex2.dir/ex2/ex2.cpp.o
   TARGET_FILE = ex2.exe
   TARGET_IMPLIB = libex2.dll.a
   TARGET_PDB = ex2.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target ex3
+
+
+#############################################
+# Order-only phony target for ex3
+
+build cmake_object_order_depends_target_ex3: phony || CMakeFiles/ex3.dir
+
+build CMakeFiles/ex3.dir/ex3/ex3.cpp.obj: CXX_COMPILER__ex3_Debug D$:/program/cpp/rm-test/ex3/ex3.cpp || cmake_object_order_depends_target_ex3
+  DEP_FILE = CMakeFiles\ex3.dir\ex3\ex3.cpp.obj.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -ID:/program/cpp/rm-test/ex2 -ID:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/include
+  OBJECT_DIR = CMakeFiles\ex3.dir
+  OBJECT_FILE_DIR = CMakeFiles\ex3.dir\ex3
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target ex3
+
+
+#############################################
+# Link the executable ex3.exe
+
+build ex3.exe: CXX_EXECUTABLE_LINKER__ex3_Debug CMakeFiles/ex3.dir/ex3/ex3.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\ex3.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = ex3.exe
+  TARGET_IMPLIB = libex3.dll.a
+  TARGET_PDB = ex3.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target ex4
+
+
+#############################################
+# Order-only phony target for ex4
+
+build cmake_object_order_depends_target_ex4: phony || CMakeFiles/ex4.dir
+
+build CMakeFiles/ex4.dir/ex4/ex4.cpp.obj: CXX_COMPILER__ex4_Debug D$:/program/cpp/rm-test/ex4/ex4.cpp || cmake_object_order_depends_target_ex4
+  DEP_FILE = CMakeFiles\ex4.dir\ex4\ex4.cpp.obj.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -ID:/program/cpp/rm-test/ex2 -isystem D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/include
+  OBJECT_DIR = CMakeFiles\ex4.dir
+  OBJECT_FILE_DIR = CMakeFiles\ex4.dir\ex4
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target ex4
+
+
+#############################################
+# Link the executable ex4.exe
+
+build ex4.exe: CXX_EXECUTABLE_LINKER__ex4_Debug CMakeFiles/ex4.dir/ex4/ex4.cpp.obj | D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_gapi455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_highgui455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_ml455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_objdetect455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_photo455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_stitching455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_video455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_videoio455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_imgcodecs455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_dnn455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_calib3d455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_features2d455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_flann455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_imgproc455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_core455.dll.a
+  FLAGS = -g
+  LINK_LIBRARIES = D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_gapi455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_highgui455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_ml455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_objdetect455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_photo455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_stitching455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_video455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_videoio455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_imgcodecs455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_dnn455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_calib3d455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_features2d455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_flann455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_imgproc455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_core455.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\ex4.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = ex4.exe
+  TARGET_IMPLIB = libex4.dll.a
+  TARGET_PDB = ex4.exe.dbg
 
 
 #############################################
@@ -186,7 +220,9 @@ build ex1: phony ex1.exe
 
 build ex2: phony ex2.exe
 
-build rm_test: phony rm_test.exe
+build ex3: phony ex3.exe
+
+build ex4: phony ex4.exe
 
 # =============================================================================
 # Folder targets.
@@ -196,7 +232,7 @@ build rm_test: phony rm_test.exe
 #############################################
 # Folder: D:/program/cpp/rm-test/cmake-build-debug
 
-build all: phony rm_test.exe ex1.exe ex2.exe
+build all: phony ex1.exe ex2.exe ex3.exe ex4.exe
 
 # =============================================================================
 # Built-in targets
@@ -205,14 +241,14 @@ build all: phony rm_test.exe ex1.exe ex2.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeRCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeRCInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-windres.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeRCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeRCInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/FindPackageMessage.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-windres.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/OpenCVConfig-version.cmake D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/OpenCVConfig.cmake D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/OpenCVConfig.cmake D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/OpenCVModules-release.cmake D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/OpenCVModules.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeRCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeRCInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-windres.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake: phony
+build ../CMakeLists.txt CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeRCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeRCInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/FindPackageMessage.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-windres.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows.cmake D$:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/cmake/win/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/OpenCVConfig-version.cmake D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/OpenCVConfig.cmake D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/OpenCVConfig.cmake D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/OpenCVModules-release.cmake D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/OpenCVModules.cmake: phony
 
 
 #############################################

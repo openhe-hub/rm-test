@@ -17,7 +17,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -34,7 +35,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -43,22 +45,29 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ex1::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ex1-Debug-95bcd61e2c407d4931cf.json",
+					"jsonFile" : "target-ex1-Debug-fe4702dfa97b04c94573.json",
 					"name" : "ex1",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "ex2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ex2-Debug-109cbd08ac29d14906e0.json",
+					"jsonFile" : "target-ex2-Debug-57affa957da2f15d4432.json",
 					"name" : "ex2",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "rm_test::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-rm_test-Debug-8c5d94eeeaa6ca65f6a2.json",
-					"name" : "rm_test",
+					"id" : "ex3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ex3-Debug-d66dca0701461f281218.json",
+					"name" : "ex3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ex4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ex4-Debug-db16c3f55bea6d3ae086.json",
+					"name" : "ex4",
 					"projectIndex" : 0
 				}
 			]

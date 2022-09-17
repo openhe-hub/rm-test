@@ -1,5 +1,6 @@
-D:/program/cpp/rm-test/cmake-build-debug/CMakeFiles/rm_test.dir
 D:/program/cpp/rm-test/cmake-build-debug/CMakeFiles/ex1.dir
 D:/program/cpp/rm-test/cmake-build-debug/CMakeFiles/ex2.dir
+D:/program/cpp/rm-test/cmake-build-debug/CMakeFiles/ex3.dir
+D:/program/cpp/rm-test/cmake-build-debug/CMakeFiles/ex4.dir
 D:/program/cpp/rm-test/cmake-build-debug/CMakeFiles/edit_cache.dir
 D:/program/cpp/rm-test/cmake-build-debug/CMakeFiles/rebuild_cache.dir

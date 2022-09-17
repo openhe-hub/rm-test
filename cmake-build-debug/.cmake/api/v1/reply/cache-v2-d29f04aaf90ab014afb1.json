@@ -1230,6 +1230,18 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_OpenCV",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding OpenCV"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64][v4.5.5()]"
+		},
+		{
 			"name" : "rm_test_BINARY_DIR",
 			"properties" : 
 			[

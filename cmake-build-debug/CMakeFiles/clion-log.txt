@@ -1,4 +1,9 @@
 D:\software\jetbrains-app\apps\CLion\ch-0\222.3739.54\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=D:/software/jetbrains-app/apps/CLion/ch-0/222.3739.54/bin/ninja/win/ninja.exe -G Ninja -S D:\program\cpp\rm-test -B D:\program\cpp\rm-test\cmake-build-debug
+-- OpenCV ARCH: x64
+-- OpenCV RUNTIME: mingw
+-- OpenCV STATIC: OFF
+-- Found OpenCV 4.5.5 in D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib
+-- You might need to add D:\software\opencv\OpenCV-MinGW-Build-OpenCV-4.5.5-x64\x64\mingw\bin to your PATH to be able to run your applications.
 -- Configuring done
 -- Generating done
 -- Build files have been written to: D:/program/cpp/rm-test/cmake-build-debug
