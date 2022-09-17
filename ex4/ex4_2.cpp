@@ -10,7 +10,7 @@
 #define MIN_CIRCUMSTANCE1 50
 #define MAX_DISTANCE1 110
 
-#define MIN_AREA2 600
+#define MIN_AREA2 300
 #define MAX_AREA2 1200
 #define MAX_CIRCUMSTANCE2 400
 #define MIN_CIRCUMSTANCE2 50
@@ -18,6 +18,9 @@
 #define MIN_DISTANCE2 150
 
 #define MAX_DELTA_HEIGHT 50
+#define MAX_DELTA_WIDTH1 90
+#define MAX_DELTA_WIDTH2 190
+
 
 #define Segment 67
 
@@ -48,6 +51,7 @@ double dist(cv::Point p1, cv::Point p2);
 std::vector<std::vector<cv::Point>> filter(std::vector<Point_Data> point_data);
 
 bool check_delta_height(Point_Data pd1,Point_Data pd2);
+bool check_delta_width(Point_Data pd1,Point_Data pd2);
 
 int cnt=1;
 long frame_num;
@@ -69,10 +73,10 @@ int main() {
     while (true){
         capture>>frame;
         if (frame.empty()) break;
-//        imshow("origin-frame",frame);
+        imshow("origin-frame",frame);
         recognize(frame);
         imshow("recognized-frame",frame);
-//        cv::waitKey(DURATION);
+        cv::waitKey(DURATION);
         cnt++;
         output<<frame;
     }
@@ -103,13 +107,6 @@ void recognize(cv::Mat &src) {
     std::vector<cv::Vec4i> hierachy;
     cv::findContours(canny_result, contours, hierachy, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_NONE);
 
-//    std::cout<<"Area:"<<std::endl;
-//    print_all_counter_area(contours);
-//    std::cout<<std::endl;
-//    std::cout<<"Circumstance:"<<std::endl;
-//    print_all_counter_circumstance(contours);
-//    std::cout<<std::endl;
-
 
     //5. remove the disturbance
     std::vector<std::vector<cv::Point>> res;
@@ -124,12 +121,22 @@ void recognize(cv::Mat &src) {
     cv::drawContours(drawer, res, -1, {255, 255, 255}, 3);
     cv::imshow("contours",drawer);
 
-    //7. draw rectangle
+    //7. draw rectangle & add text
     std::vector<Point_Data> desc= desc_contours(res);
     std::vector<std::vector<cv::Point>> targets=filter(desc);
+    if (!targets.empty()){
+        cv::putText(src, "TARGETING AREA:", {5, 20}, cv::FONT_HERSHEY_TRIPLEX, 0.8, {255, 0, 255}, 1, false);
+    }
+    int group_num=1;
     for (const auto &target: targets){
         cv::rectangle(drawer,target[0],target[3],cv::Scalar(255,255,0));
         cv::rectangle(src,target[0],target[3],cv::Scalar(255,255,0));
+        cv::putText(src, "Group "+ std::to_string(group_num), {5, (group_num-1)*150+50}, cv::FONT_HERSHEY_TRIPLEX, 0.8, {255, 0, 255}, 1, false);
+        cv::putText(src, point_to_str(target[0], "p1"), {10, group_num*150-70}, cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
+        cv::putText(src, point_to_str(target[1], "p2"), {10, group_num*150-40}, cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
+        cv::putText(src, point_to_str(target[2], "p3"), {10, group_num*150-10}, cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
+        cv::putText(src, point_to_str(target[3], "p4"), {10, group_num*150+20}, cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
+        group_num++;
     }
 }
 
@@ -154,7 +161,8 @@ std::vector<std::vector<cv::Point>> filter(std::vector<Point_Data> point_data) {
         for (int j = i+1; j < point_data.size(); ++j) {
             double dis=dist(point_data[i].center_point,point_data[j].center_point);
             if ((cnt<=Segment&&dis<=MAX_DISTANCE1)||(cnt>Segment&&dis<=MAX_DISTANCE2&&dis>=MIN_DISTANCE2)) {
-                if (check_delta_height(point_data[i],point_data[j])){
+                if (check_delta_height(point_data[i],point_data[j])&&
+                        check_delta_width(point_data[i],point_data[j])){
                     int x1=std::min(point_data[i].x_min,point_data[j].x_min);
                     int x2=std::max(point_data[i].x_max,point_data[j].x_max);
                     int y1=std::min(point_data[i].y_min,point_data[j].y_min);
@@ -165,7 +173,6 @@ std::vector<std::vector<cv::Point>> filter(std::vector<Point_Data> point_data) {
             }
         }
     }
-    std::cout<<std::endl;
     return res;
 }
 
@@ -215,4 +222,18 @@ void print_all_counter_circumstance(const std::vector<std::vector<cv::Point>> &c
 bool check_delta_height(Point_Data pd1,Point_Data pd2){
     return std::max(abs(pd1.y_min-pd2.y_min),
              abs(pd1.y_max-pd2.y_max))<=MAX_DELTA_HEIGHT;
+}
+
+bool check_delta_width(Point_Data pd1,Point_Data pd2){
+    if (cnt<=Segment){
+        return std::max(abs(pd1.x_min-pd2.x_max),abs(pd2.x_min-pd2.x_max))<=MAX_DELTA_WIDTH1;
+    }else{
+        return std::max(abs(pd1.x_min-pd2.x_max),abs(pd2.x_min-pd2.x_max))<=MAX_DELTA_WIDTH2;
+    }
+
+}
+
+std::string point_to_str(const cv::Point &p, std::string name){
+    std::string res = name + "(" + std::to_string(p.x) + "," + std::to_string(p.y) + ")";
+    return res;
 }
