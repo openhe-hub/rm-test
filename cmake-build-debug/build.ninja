@@ -190,6 +190,40 @@ build ex4.exe: CXX_EXECUTABLE_LINKER__ex4_Debug CMakeFiles/ex4.dir/ex4/ex4.cpp.o
   TARGET_IMPLIB = libex4.dll.a
   TARGET_PDB = ex4.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target ex4_2
+
+
+#############################################
+# Order-only phony target for ex4_2
+
+build cmake_object_order_depends_target_ex4_2: phony || CMakeFiles/ex4_2.dir
+
+build CMakeFiles/ex4_2.dir/ex4/ex4_2.cpp.obj: CXX_COMPILER__ex4_2_Debug D$:/program/cpp/rm-test/ex4/ex4_2.cpp || cmake_object_order_depends_target_ex4_2
+  DEP_FILE = CMakeFiles\ex4_2.dir\ex4\ex4_2.cpp.obj.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -ID:/program/cpp/rm-test/ex2 -isystem D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/include
+  OBJECT_DIR = CMakeFiles\ex4_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\ex4_2.dir\ex4
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target ex4_2
+
+
+#############################################
+# Link the executable ex4_2.exe
+
+build ex4_2.exe: CXX_EXECUTABLE_LINKER__ex4_2_Debug CMakeFiles/ex4_2.dir/ex4/ex4_2.cpp.obj | D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_gapi455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_highgui455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_ml455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_objdetect455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_photo455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_stitching455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_video455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_videoio455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_imgcodecs455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_dnn455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_calib3d455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_features2d455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_flann455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_imgproc455.dll.a D$:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_core455.dll.a
+  FLAGS = -g
+  LINK_LIBRARIES = D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_gapi455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_highgui455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_ml455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_objdetect455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_photo455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_stitching455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_video455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_videoio455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_imgcodecs455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_dnn455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_calib3d455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_features2d455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_flann455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_imgproc455.dll.a  D:/software/opencv/OpenCV-MinGW-Build-OpenCV-4.5.5-x64/x64/mingw/lib/libopencv_core455.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\ex4_2.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = ex4_2.exe
+  TARGET_IMPLIB = libex4_2.dll.a
+  TARGET_PDB = ex4_2.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -224,6 +258,8 @@ build ex3: phony ex3.exe
 
 build ex4: phony ex4.exe
 
+build ex4_2: phony ex4_2.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -232,7 +268,7 @@ build ex4: phony ex4.exe
 #############################################
 # Folder: D:/program/cpp/rm-test/cmake-build-debug
 
-build all: phony ex1.exe ex2.exe ex3.exe ex4.exe
+build all: phony ex1.exe ex2.exe ex3.exe ex4.exe ex4_2.exe
 
 # =============================================================================
 # Built-in targets
