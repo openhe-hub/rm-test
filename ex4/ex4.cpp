@@ -23,19 +23,19 @@ int main() {
     //1. graying
     cv::Mat grey;
     cv::cvtColor(src, grey, cv::COLOR_BGR2GRAY);
-    cv::imshow("grey", grey);
+//    cv::imshow("grey", grey);
 //    cv::imwrite(R"(D:\program\cpp\rm-test\ex4\output\grey.jpg)",grey);
 
     //2. binaryzation
     cv::Mat binary_img;
     cv::threshold(grey, binary_img, 100, 200, cv::THRESH_BINARY);
-    cv::imshow("binary_img", binary_img);
+//    cv::imshow("binary_img", binary_img);
 //    cv::imwrite(R"(D:\program\cpp\rm-test\ex4\output\binary_img.jpg)",binary_img);
 
     //3. outline recognition
     cv::Mat canny_result;
     cv::Canny(binary_img, canny_result, 50, 100, 3);
-    cv::imshow("canny_result", canny_result);
+//    cv::imshow("canny_result", canny_result);
 //    cv::imwrite(R"(D:\program\cpp\rm-test\ex4\output\canny_result.jpg)",canny_result);
 
     //4. get contour
@@ -82,12 +82,17 @@ int main() {
     cv::putText(src, point_to_str(p2, "p2"), {10, 80}, cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
     cv::putText(src, point_to_str(p3, "p3"), {10, 110}, cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
     cv::putText(src, point_to_str(p4, "p4"), {10, 140}, cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
+    cv::putText(src, "p1", p1, cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
+    cv::putText(src, "p2", p2, cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
+    cv::putText(src, "p3", p3, cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
+    cv::putText(src, "p4", p4, cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
 
-    cv::imshow("src", src);
-//    cv::imwrite(R"(D:\program\cpp\rm-test\ex4\output\result.jpg)",src);
-    cv::imshow("contours", drawer);
+    cv::imshow("result", src);
+    cv::imwrite(R"(D:\program\cpp\rm-test\ex4\output\d-result.jpg)",src);
+    cv::imwrite(R"(D:\program\cpp\rm-test\ex4\res\d-result.jpg)",src);
+//    cv::imshow("contours", drawer);
 //    cv::imwrite(R"(D:\program\cpp\rm-test\ex4\output\contours.jpg)",drawer);
-    std::cout<<R"(you can find the final output at :\ex4\output\contours.jpg)"<<std::endl;
+    std::cout<<R"(you can find the final output at :\ex4\output\d-result.jpg)"<<std::endl;
     cv::waitKey(0);
     return 0;
 }

@@ -15,7 +15,7 @@
 #define MAX_CIRCUMSTANCE2 400
 #define MIN_CIRCUMSTANCE2 50
 #define MAX_DISTANCE2 220
-#define MIN_DISTANCE2 150
+#define MIN_DISTANCE2 100
 
 #define MAX_DELTA_HEIGHT 50
 #define MAX_DELTA_WIDTH1 90
@@ -63,7 +63,7 @@ int main() {
     long frame_height=capture.get(cv::CAP_PROP_FRAME_HEIGHT);
     cv::Size size=cv::Size(frame_width,frame_height);
     double fps = capture.get(cv::CAP_PROP_FPS);
-    cv::VideoWriter output=cv::VideoWriter(R"(D:\program\cpp\rm-test\ex4\output\d_res.avi)",
+    cv::VideoWriter output=cv::VideoWriter(R"(D:\program\cpp\rm-test\ex4\output\d-result.avi)",
                                            cv::VideoWriter::fourcc('P','I','M','1'),
                                            fps,
                                            size);
@@ -80,6 +80,9 @@ int main() {
         cnt++;
         output<<frame;
     }
+
+    std::cout<<R"(you can find the final output at :\ex4\output\d-result.mp4(converted) or \ex4\output\d-result.avi(original))"<<std::endl;
+    std::cout<<R"(you can find a slow version at :\ex4\output\d-result-slow.mp4(converted))"<<std::endl;
 
     output.release();
     capture.release();
@@ -136,6 +139,10 @@ void recognize(cv::Mat &src) {
         cv::putText(src, point_to_str(target[1], "p2"), {10, group_num*150-40}, cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
         cv::putText(src, point_to_str(target[2], "p3"), {10, group_num*150-10}, cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
         cv::putText(src, point_to_str(target[3], "p4"), {10, group_num*150+20}, cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
+        cv::putText(src, "G"+ std::to_string(group_num)+"p1", target[0], cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
+        cv::putText(src, "G"+ std::to_string(group_num)+"p2", target[1], cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
+        cv::putText(src, "G"+ std::to_string(group_num)+"p3", target[2], cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
+        cv::putText(src, "G"+ std::to_string(group_num)+"p4", target[3], cv::FONT_HERSHEY_TRIPLEX, 0.6, {0, 255, 255}, 1, false);
         group_num++;
     }
 }
